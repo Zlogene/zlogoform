@@ -194,7 +194,6 @@ output "jumphost_ip" {
   value = aws_eip.jumphost.public_ip
 }
 
-
 # EFS madness starts here:
 
 resource "aws_efs_file_system" "efs-zlogene" {
