@@ -212,14 +212,14 @@ resource "aws_efs_mount_target" "efs-mt-zlogene" {
    security_groups = [aws_security_group.securitygroup.id]
  }
 
- # RDS goes here:
+# RDS goes here:
 
 resource "aws_db_subnet_group" "db_subnet" {
    name = "zlogene_db_subnet"
    subnet_ids = [aws_subnet.instance.id, aws_subnet.instance2.id]
  }
 
- resource "aws_db_instance" "zlogene_instance" {
+resource "aws_db_instance" "zlogene_instance" {
   allocated_storage = 20
   identifier = "testinstance"
   storage_type = "gp2"
